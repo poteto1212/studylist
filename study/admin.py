@@ -1,3 +1,7 @@
 from django.contrib import admin
+from study.models import SubjectList,Studylist
 
-# Register your models here.
+adminlists=[SubjectList,Studylist]
+
+for adminlist in adminlists:
+    admin.site.register(adminlist)
