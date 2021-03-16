@@ -26,9 +26,15 @@ class Studylist(models.Model):
         max_length=100,
         )
     
+    parentsubjectlist=models.ForeignKey(
+        SubjectList,
+        verbose_nam='科目選択',
+        on_delete=models.CASCADE,
+        )
+    
     subjectlist=models.ForeignKey(
         SubSubjectList,
-        verbose_name='科目,分野選択',
+        verbose_name='分野選択',
         on_delete=models.CASCADE,
         )
     problem=models.CharField(
