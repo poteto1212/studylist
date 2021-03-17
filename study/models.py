@@ -13,23 +13,20 @@ class SubSubjectList(models.Model):
         verbose_name='科目選択',
         on_delete=models.CASCADE,
         )
-    
+    def __str__(self):
+        return self.parentsubjectlist
+
     subjectlist=models.CharField(verbose_name='分野名',max_length=60)
+    
     def __str__(self):
         return self.subjectlist
-
+    
         
 class Studylist(models.Model):
     
     overview=models.CharField(
         verbose_name='問題の概要',
         max_length=100,
-        )
-    
-    parentsubjectlist=models.ForeignKey(
-        SubjectList,
-        verbose_nam='科目選択',
-        on_delete=models.CASCADE,
         )
     
     subjectlist=models.ForeignKey(
