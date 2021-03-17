@@ -16,8 +16,8 @@
         {% for studylist in object_list %}
         <tr>
             <td>{{studylist.overview}}</td>
-            <td>{{studylist.subjectlist}}</td>
-            <td>{{studylist.subjectlist}}</td>
+            <td>{{studylist.subjectlist.parentsubjectlist}}</td>
+            <td>{{studylist.subjectlist.subjectlist}}</td>
             <td>{{studylist.problem}}</td>
             <td>{{studylist.answer}}</td>
         </tr>
