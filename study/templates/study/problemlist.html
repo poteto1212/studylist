@@ -5,9 +5,15 @@
 </head>
 <body>
     <select>
-        {% for select in parent_subjectlist %}
-        <option>{{select}}</option>
-        {% endfor %}
+    {% for studylist in object_list %}
+        <option>{{studylist.subjectlist.parentsubjectlist}}</option>
+    {% endfor %}
+    </select>
+    <select>
+    {% for studylist in object_list %}
+        <option>{{studylist.subjectlist.subjectlist}}</option>
+    {% endfor %}
+    
     </select>
     <table border=1>
         <tr>
