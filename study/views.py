@@ -11,6 +11,7 @@ class Study(generic.TemplateView):
 class StudylistView(generic.ListView):
     template_name='study/problemlist.html'
     model=Studylist
-    
+
+
     
   

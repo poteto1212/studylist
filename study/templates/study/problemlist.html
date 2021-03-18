@@ -4,16 +4,15 @@
     <title>問題一覧</title>
 </head>
 <body>
-    <select>
+    <select id="subject">
     {% for studylist in object_list %}
         <option>{{studylist.subjectlist.parentsubjectlist}}</option>
     {% endfor %}
     </select>
-    <select>
+    <select id='subsubject'>
     {% for studylist in object_list %}
         <option>{{studylist.subjectlist.subjectlist}}</option>
     {% endfor %}
-    
     </select>
     <table border=1>
         <tr>
