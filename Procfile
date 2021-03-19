@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn study.wsgi
+web: gunicorn study_db.wsgi
